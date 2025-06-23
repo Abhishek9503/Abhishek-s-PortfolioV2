@@ -1,0 +1,10 @@
+.wakatimeBadge {
+    display: inline-block;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(202, 7, 7, 0.1);
+    
+    img {
+        display: block;
+    }
+}
