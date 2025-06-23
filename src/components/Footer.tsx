@@ -31,43 +31,43 @@ export const Footer = () => {
       justifyContent="center"
     >
       <Flex
-      fillWidth
-      maxWidth="m"
-      paddingY="8"
-      justifyContent="space-between"
-      alignItems="center"
-      mobileDirection="column"
-      style={{ marginBottom: isMobile ? "80px" : "0px" }}
+        fillWidth
+        maxWidth="m"
+        paddingY="8"
+        justifyContent="space-between"
+        alignItems="center"
+        mobileDirection="column"
+        style={{ marginBottom: isMobile ? "80px" : "0px" }}
 
-    
+
       >
-    
-      <Text variant="body-default-s" onBackground="neutral-strong" align="center">
-        <Text onBackground="neutral-weak">© {currentYear} /</Text>
-        <Text paddingX="4">{person.name}</Text>
-        <Text onBackground="neutral-weak">
-        {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-        / Find my projects at{" "}
-        <SmartLink style={{ marginLeft: "-0.125rem" }} href="https://github.com/Abhishek9503">
-          Github
-        </SmartLink>
+
+        <Text variant="body-default-s" onBackground="neutral-strong" align="center">
+          <Text onBackground="neutral-weak">© {currentYear} /</Text>
+          <Text paddingX="4">{person.name}</Text>
+          <Text onBackground="neutral-weak">
+            {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
+            / Find my projects at{" "}
+            <SmartLink style={{ marginLeft: "-0.125rem" }} href="https://github.com/Abhishek9503">
+              Github
+            </SmartLink>
+          </Text>
         </Text>
-      </Text>
-      <Flex gap="16">
-        {social.map(
-        (item) =>
-          item.link && (
-          <IconButton
-            key={item.name}
-            href={item.link}
-            icon={item.icon}
-            tooltip={item.name}
-            size="s"
-            variant="ghost"
-          />
-          )
-        )}
-      </Flex>
+        <Flex gap="16">
+          {social.map(
+            (item) =>
+              item.link && (
+                <IconButton
+                  key={item.name}
+                  href={item.link}
+                  icon={item.icon}
+                  tooltip={item.name}
+                  size="s"
+                  variant="ghost"
+                />
+              )
+          )}
+        </Flex>
       </Flex>
     </Flex>
   );

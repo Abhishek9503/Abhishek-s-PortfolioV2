@@ -60,7 +60,7 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({
 
     return (
         <Flex>
-            <Toaster toasts={toasts} removeToast={removeToast}/>
+            <Toaster toasts={toasts} removeToast={removeToast} />
             <Flex
                 style={style}
                 onClick={() => copyURL(id)}

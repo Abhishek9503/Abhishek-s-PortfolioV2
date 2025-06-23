@@ -47,7 +47,7 @@ const display = {
 }
 
 const mailchimp = {
-    action: 'https://soniyaprasad.us14.list-manage.com/subscribe/post?u=6939e3cb221a9c7d163c0284f&amp;id=f6b6ab0a3e&amp;f_id=00168ae0f0',
+    action: '',
     effects: {
         gradient: true,
         dots: false,
