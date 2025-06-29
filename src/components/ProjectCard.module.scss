@@ -1,0 +1,37 @@
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y; /* Allow vertical scrolling, handle horizontal touches */
+  
+  &:active {
+    /* Slight scale effect when touching */
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+.swipeHint {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+  
+  @media (min-width: 768px) {
+    display: none; /* Hide on desktop since click is available */
+  }
+}
+
+.imageWrapper {
+  transition: transform 0.3s ease-out;
+  
+  &.swiping {
+    transition: none; /* Remove transition during active swipe */
+  }
+}
