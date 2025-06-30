@@ -23,14 +23,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
-
     const t = useTranslations();
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsTransitioning(true);
         }, 1000);
-
         return () => clearTimeout(timer);
     }, []);
 
@@ -39,7 +37,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             setIsTransitioning(false);
             const nextIndex = (activeIndex + 1) % images.length;
             handleControlClick(nextIndex);
-
         }
     };
 
